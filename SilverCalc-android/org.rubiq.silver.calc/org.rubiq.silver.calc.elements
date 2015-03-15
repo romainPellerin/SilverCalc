@@ -80,10 +80,18 @@
         <Reference Include="com.remobjects.elements.rtl.jar">
             <Private>True</Private>
         </Reference>
+        <Reference Include="sugar.data">
+            <HintPath>\sugar.data.jar</HintPath>
+            <Private>True</Private>
+        </Reference>
+        <Reference Include="sugar">
+            <HintPath>\sugar.jar</HintPath>
+            <Private>True</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.swift"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Cooper.Android.targets"/>
-    <Import Project="..\..\SilverCalc-shrd\SilverCalc.projitems" Label="Shared"/>
+    <Import Project="../../SilverCalc-shrd/SilverCalc.projitems" Label="Shared"/>
 </Project>
