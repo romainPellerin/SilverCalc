@@ -1,0 +1,30 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SilverCalc", "SilverCalc-shrd\SilverCalc.elements", "{339BADC7-27DC-4125-A78E-EF9F35C7A611}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "SilverCalc-iOS", "SilverCalc-iOS\SilverCalc-iOS.elements", "{87D3665C-CBB9-4A2D-8926-4BC76BC865A5}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "org.rubiq.silver.calc", "SilverCalc-android\org.rubiq.silver.calc\org.rubiq.silver.calc.elements", "{BC98E73C-FEC2-40C6-9C52-72D43DEDB6AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{339BADC7-27DC-4125-A78E-EF9F35C7A611}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{339BADC7-27DC-4125-A78E-EF9F35C7A611}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{87D3665C-CBB9-4A2D-8926-4BC76BC865A5}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{87D3665C-CBB9-4A2D-8926-4BC76BC865A5}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{87D3665C-CBB9-4A2D-8926-4BC76BC865A5}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{87D3665C-CBB9-4A2D-8926-4BC76BC865A5}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{BC98E73C-FEC2-40C6-9C52-72D43DEDB6AB}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{BC98E73C-FEC2-40C6-9C52-72D43DEDB6AB}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{BC98E73C-FEC2-40C6-9C52-72D43DEDB6AB}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{BC98E73C-FEC2-40C6-9C52-72D43DEDB6AB}.Release|AnyCPU.Build.0 = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
