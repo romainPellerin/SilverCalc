@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="4.0">
+    <PropertyGroup>
+        <RootNamespace>SilverCalciOS</RootNamespace>
+        <ProjectGuid>87D3665C-CBB9-4A2D-8926-4BC76BC865A5</ProjectGuid>
+        <OutputType>executable</OutputType>
+        <AssemblyName>SilverCalciOS</AssemblyName>
+        <AllowGlobals>False</AllowGlobals>
+        <AllowLegacyWith>False</AllowLegacyWith>
+        <AllowLegacyOutParams>False</AllowLegacyOutParams>
+        <AllowLegacyCreate>False</AllowLegacyCreate>
+        <AllowUnsafeCode>False</AllowUnsafeCode>
+        <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+        <SDK>iOS</SDK>
+        <CreateAppBundle>True</CreateAppBundle>
+        <InfoPListFile>.\Resources\Info.plist</InfoPListFile>
+        <ProvisioningProfileName>iOSTeam Provisioning Profile: *</ProvisioningProfileName>
+        <ProvisioningProfile>64c475b0-6209-4a9e-9fe9-5ff689d930e3</ProvisioningProfile>
+        <CrossBoxDeviceID>iOS Simulator (iPhone Retina 4")</CrossBoxDeviceID>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <Optimize>false</Optimize>
+        <OutputPath>.\bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;TRACE;</DefineConstants>
+        <GenerateDebugInfo>True</GenerateDebugInfo>
+        <EnableAsserts>True</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Optimize>true</Optimize>
+        <OutputPath>.\bin\Release</OutputPath>
+        <GenerateDebugInfo>True</GenerateDebugInfo>
+        <GenerateDSym>True</GenerateDSym>
+        <EnableAsserts>False</EnableAsserts>
+        <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+        <CaptureConsoleOutput>False</CaptureConsoleOutput>
+        <WarnOnCaseMismatch>True</WarnOnCaseMismatch>
+        <CreateIPA>True</CreateIPA>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="CoreGraphics.fx"/>
+        <Reference Include="Foundation.fx"/>
+        <Reference Include="UIKit.fx"/>
+        <Reference Include="rtl.fx"/>
+        <Reference Include="libNougat.fx"/>
+        <Reference Include="libSwift.fx"/>
+        <Reference Include="libSugar.Data">
+            <HintPath>\libSugar.Data.fx</HintPath>
+        </Reference>
+        <Reference Include="libSugar">
+            <HintPath>\libSugar.fx</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="AppDelegate.swift"/>
+        <Compile Include="RootViewController.swift"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="Resources\Info.plist"/>
+        <Storyboard Include="Resources\Main.storyboard"/>
+        <AssetCatalog Include="Resources\Images.xcassets">
+            <AppIcon>AppIcon</AppIcon>
+        </AssetCatalog>
+        <Xib Include="Resources\LaunchScreen.xib"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>
+    <Import Project="../SilverCalc-shrd/SilverCalc.projitems" Label="Shared"/>
+</Project>
