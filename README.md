@@ -1,2 +1,2 @@
 # SilverCalc
-A simple iOS/Android calculator app implemented in Silver language
+A simple iOS/Android calculator app implemented in RemObjects Silver language
