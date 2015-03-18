@@ -93,10 +93,6 @@ class Calculator{
 
 		var result: String = Convert.ToString(getDoubleValue())
 		
-		/*if inverted { 
-			result = "-"+result
-		}*/
-		
 		return result
 	}
 	

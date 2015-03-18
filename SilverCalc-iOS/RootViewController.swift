@@ -8,15 +8,11 @@
 
 	@IBOutlet var tf_numb : UITextField!
 
-	var result = 0
-	var resultDisplayed = ""
-	
-	var lastAction = NUMBER_ACTION
-	
 	var NUMBER_ACTION = 0
 	var OPERATOR_ACTION = 1
 	var DOT_ACTION = 2
 	var EQUAL_ACTION = 3
+	var lastAction = NUMBER_ACTION
 
 
 	public override func viewDidLoad() {
@@ -37,7 +33,7 @@
 	
 	func setupButtons(){
 		
-		// discver buttons from view in Main.storyboard
+		// discover buttons from view in Main.storyboard
 		// instead of duplicate buttons declarations
 		for bt in self.view.subviews {
 			if bt is UIButton {  
@@ -46,7 +42,7 @@
 				bt.layer.borderColor = UIColor(red: 191.0/255, green: 188.0/255, blue:  188.0/255, alpha: 1.0).CGColor
 				bt.layer.borderWidth = 0.5
 			
-				// bund methods to buttons
+				// bind target methods to buttons
 				if bt.titleLabel.text == "x" {
 					bt.addTarget(self, action: "multiply:", forControlEvents: UIControlEvents.TouchUpInside)
 				}
