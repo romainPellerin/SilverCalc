@@ -1,0 +1,7 @@
+
+<Project xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
+    <PropertyGroup>
+        <CrossBoxDevice>Android SDK built for x86</CrossBoxDevice>
+        <CrossBoxDeviceID>emulator-5554</CrossBoxDeviceID>
+    </PropertyGroup>
+</Project>

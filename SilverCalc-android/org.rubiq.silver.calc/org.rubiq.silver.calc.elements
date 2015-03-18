@@ -74,9 +74,6 @@
     </ItemGroup>
     <ItemGroup>
         <Reference Include="android.jar"/>
-        <Reference Include="swift.jar">
-            <Private>True</Private>
-        </Reference>
         <Reference Include="com.remobjects.elements.rtl.jar">
             <Private>True</Private>
         </Reference>
@@ -91,6 +88,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainActivity.swift"/>
+        <None Include="..\..\org.me.androidapplication\res\layout\main.layout-xml"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Cooper.Android.targets"/>
     <Import Project="../../SilverCalc-shrd/SilverCalc.projitems" Label="Shared"/>
