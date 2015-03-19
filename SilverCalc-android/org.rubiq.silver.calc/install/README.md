@@ -1,0 +1,1 @@
+Until a new version (> 20150319-104056) of Silver will be released, you will have to replace your RemObjects+Elements+-+Mac+Zip+Distro+-+beta-20150319-104056+-+8/Sugar/Cooper/Android/sugar.jar with this one. 
