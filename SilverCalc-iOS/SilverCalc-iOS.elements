@@ -66,5 +66,5 @@
         <Xib Include="Resources\LaunchScreen.xib"/>
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Oxygene.Nougat.targets"/>
-    <Import Project="..\SilverCalc-shrd\SilverCalc.projitems" Label="Shared"/>
+    <Import Project="../SilverCalc-shrd/SilverCalc.projitems" Label="Shared"/>
 </Project>
