@@ -1,5 +1,5 @@
 # SilverCalc
-A simple iOS/Android calculator app implemented in RemObjects Silver language
+A simple iOS/Android calculator crossplatform app implemented in RemObjects Silver language.
 
 You can learn how to install, build and run it here: http://goo.gl/dw7Uek
 
