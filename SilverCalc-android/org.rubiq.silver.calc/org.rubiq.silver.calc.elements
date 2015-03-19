@@ -77,6 +77,10 @@
         <Reference Include="com.remobjects.elements.rtl.jar">
             <Private>True</Private>
         </Reference>
+        <Reference Include="swift">
+            <HintPath>\swift.jar</HintPath>
+            <Private>True</Private>
+        </Reference>
         <Reference Include="sugar.data">
             <HintPath>\sugar.data.jar</HintPath>
             <Private>True</Private>

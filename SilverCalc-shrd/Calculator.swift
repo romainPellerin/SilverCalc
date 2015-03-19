@@ -91,7 +91,14 @@ class Calculator{
 	// get the value of in memory number
 	func getStringValue() -> String{
 
-		var result: String = Convert.ToString(getDoubleValue())
+		var d = getDoubleValue()
+		
+		// this trick avoid to display 0E+00 on 0.0 to string conversion
+		var result: String = "0.0"
+		 
+		if d != 0.0 {
+			result = Convert.ToString(d)
+		}
 		
 		return result
 	}

@@ -23,10 +23,8 @@ public class MainActivity: Activity {
 	public override func onCreate(savedInstanceState: Bundle!) {
 		super.onCreate(savedInstanceState)
 		ContentView = R.layout.main
-		buttons = (findViewById(R.id.calcLayout) as! RelativeLayout).getTouchables()
 		
-			  
-		alert("alive")
+		buttons = (findViewById(R.id.calcLayout) as! RelativeLayout).getTouchables()
 		setupButtons()
 	}
 	
@@ -51,31 +49,31 @@ public class MainActivity: Activity {
 
 				// bind listeners to buttons
 				if btText == "x" {
-					bt.setOnClickListener{multiply(bt)}
+					bt.setOnClickListener{self.multiply(bt)}
 				}
 				else if btText == "/" {
-					bt.setOnClickListener{divide(bt)}
+					bt.setOnClickListener{self.divide(bt)}
 				}
 				else if btText == "-" {
-					bt.setOnClickListener{minus(bt)}
+					bt.setOnClickListener{self.minus(bt)}
 				}
 				else if btText == "+" {
-					bt.setOnClickListener{add(bt)}
+					bt.setOnClickListener{self.add(bt)}
 				}
 				else if btText == "C" {
-					bt.setOnClickListener{clear(bt)}
+					bt.setOnClickListener{self.clear(bt)}
 				}
 				else if btText == "+/-" {
-					bt.setOnClickListener{invert(bt)}
+					bt.setOnClickListener{self.invert(bt)}
 				}
 				else if btText == "=" {
-					bt.setOnClickListener{equal(bt)}
+					bt.setOnClickListener{self.equal(bt)}
 				}
 				else if btText == "," {
-					bt.setOnClickListener{dot(bt)}
+					bt.setOnClickListener{self.dot(bt)}
 				}
 				else {
-					bt.setOnClickListener{numberPressed(btText)}
+					bt.setOnClickListener{self.numberPressed(btText)}
 				}
 			}
 			else if bt is TextView {  
@@ -92,7 +90,7 @@ public class MainActivity: Activity {
 		
 		var c : Int32 = nb[0]-48
 		
-		// calc will compose number with new int part
+		// calc will put this new digit at the number's end
 		calc.composeNumber(c)
 		tf.Text = calc.getStringValue()
 	}
@@ -102,7 +100,6 @@ public class MainActivity: Activity {
 		lastAction = OPERATOR_ACTION
 		calc.multiply()
 		tf.setText(calc.getStringValue())
-		alert("multiply")
 	}
 	
 	func divide(sender:View!)
@@ -151,7 +148,6 @@ public class MainActivity: Activity {
 	{
 		lastAction = OPERATOR_ACTION
 		calc.afterdot = true
-		alert("dot pressed")
 	}
 	
 	public override func onCreateOptionsMenu(menu: Menu!) -> Boolean{
